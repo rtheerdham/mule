@@ -52,3 +52,5 @@ sudo systemctl restart mysql
  ```
 
 ## More details will be presented in power point presentation(`MulePresentation.pptx`)
+
+![Demo](file:///Users/rohiththeerdham/Documents/mule.gif)
