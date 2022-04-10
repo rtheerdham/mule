@@ -128,3 +128,17 @@ resource "aws_vpc_peering_connection" "peering" {
     allow_remote_vpc_dns_resolution = true
   }
 }
+
+# Create a route 1
+resource "aws_route" "r1" {
+  route_table_id            = aws_route_table.rt1.id
+  destination_cidr_block    = var.vpc2_cidr_block
+  vpc_peering_connection_id = aws_vpc_peering_connection.peering.id
+}
+
+# Create a route 2
+resource "aws_route" "r2" {
+  route_table_id            = aws_route_table.rt2.id
+  destination_cidr_block    = var.vpc1_cidr_block
+  vpc_peering_connection_id = aws_vpc_peering_connection.peering.id
+}
