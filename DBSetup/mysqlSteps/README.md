@@ -7,10 +7,10 @@
 
 ## Provide these grants from RDS instance to EC2 Instance
 	```
-	mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.31.95.28' WITH GRANT OPTION;
+	mysql> GRANT ALL PRIVILEGES ON mysql.inventory_item TO 'root'@'172.31.95.28' WITH GRANT OPTION;
 	Query OK, 0 rows affected (0.01 sec)
 	
-	mysql> GRANT ALL PRIVILEGES ON *.* TO 'mule'@'172.31.95.28' WITH GRANT OPTION;
+	mysql> GRANT ALL PRIVILEGES ON mysql.inventory_item TO 'mule'@'172.31.95.28' WITH GRANT OPTION;
 	Query OK, 0 rows affected (0.00 sec)
 	
 	#for testing
