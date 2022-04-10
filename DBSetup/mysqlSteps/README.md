@@ -17,7 +17,7 @@
 	mysql> REVOKE ALL PRIVILEGES ON *.* FROM 'mule'@'172.31.95.28';
 	```
 
-## In RDS instance, update musql conf (bind ex2 instance private ip address) then restart the mysql 
+## In RDS instance, update mysql conf (bind ex2 instance private ip address) then restart the mysql 
   	```
   	/etc/mysql/mysql.conf.d/mysqld.cnf
   	sudo systemctl restart mysql
