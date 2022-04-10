@@ -11,16 +11,20 @@
  sudo apt install ansible
   ```
   
-- Install openjdk(using ansible) in EC2
-- Instll maven (using ansible) in EC2
-- Create home directory for mule (using ansible)
-- copy mule binary to mule home dir (using ansible)
+- Install openjdk(using ansible) in EC2 instance
+- Instll maven (using ansible) in EC2 instance
+- Create home directory for mule (using Ansible)
+- copy mule binary to mule home dir (using Ansible)
 - Setup java maven homes
 ```
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export MAVEN_HOME=/usr/share/maven
 ```
 - Give executable perms on mule bin 
+- Package the invenory API app into jar file and place it inside `apps` folder in mule runtime
+- Integrate mule runtime with Anypoint Platform(using Ansible)
+- start the mule with below command
+ `mule start`
 
 ## In VPC2
 
