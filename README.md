@@ -1,6 +1,7 @@
 # Steps to follow
 
-## 
+## VPC1
+
 - Create ansible copy project for copying mule runtime and fssm API project to EC2 instance in VPC1.
 - Install ansible in EC2 in VPC1
  ```
@@ -21,8 +22,8 @@ export MAVEN_HOME=/usr/share/maven
 ```
 - Give executable perms on mule bin 
 
+## VPC2
 
-- Create VPC Peering
 - In VPC2 EC2 instance(RDS), install mysql
 ```
      sudo apt update
