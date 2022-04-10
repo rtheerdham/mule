@@ -1,7 +1,7 @@
-#Command to run playbook
+# Command to run playbook
 ```ansible-playbook -i environments playbooks/copy.yml```
 
-#Output
+# Output
 ```
 PLAY [Copy mule runtime] **************************************************************************************************************************************************
 

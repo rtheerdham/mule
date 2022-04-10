@@ -39,4 +39,4 @@
   - name: Register runtime with Anypoint platform
     shell: |
       cd ~/mule/mule-enterprise-standalone-4.4.0/bin 
-      sh amc_setup -H 6800c715-8529-4498-991e-842261b372b4---682471 mule-server
+      sh amc_setup -H 6800xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx---68$$$$ mule-server
