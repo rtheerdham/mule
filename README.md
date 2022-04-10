@@ -36,6 +36,10 @@ CREATE USER 'mule'@'172.31.95.28' IDENTIFIED BY 'xxxxx';
 ```
 	
 - Provide these grants from RDS in VPC2 to EC2 Instance in VPC1
+```
+        mysql> GRANT ALL PRIVILEGES ON *.* TO 'mule'@'172.31.95.28' WITH GRANT OPTION;
+	Query OK, 0 rows affected (0.00 sec)
+```
 
 - In RDS, update mysql conf (bind ex2 instance private ip address) then restart the mysql 
   /etc/mysql/mysql.conf.d/mysqld.cnf
