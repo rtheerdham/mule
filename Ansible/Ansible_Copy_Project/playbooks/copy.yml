@@ -1,0 +1,23 @@
+---
+
+- name: Copy mule runtime
+  hosts: ubuntu
+  become: true
+  remote_user: "ubuntu"
+  connection: ssh
+
+
+  tasks:
+    - name: Copy mule runtime
+      copy:
+        remote_src: no
+        src: "/Users/rohiththeerdham/Ansible/mule/ansible-mule-runtime/files/mule-enterprise-standalone-4.4.0"
+        dest: "/tmp"
+        mode: 0644
+    
+    - name: Copy API project
+      copy:
+        remote_src: no
+        src: "/Users/rohiththeerdham/Ansible/mule/ansible-mule-runtime/files/fssm-inventory-api"
+        dest: "/tmp"
+        mode: 0644

@@ -1,0 +1,42 @@
+---
+- hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Install openJDK
+    apt:
+      name: openjdk-11-jre-headless
+      state: present
+
+  - name: Install Maven
+    apt:
+      name: maven
+      state: present
+  
+  - name: Create a directory if it does not exist
+    file:
+      path: ~/mule
+      state: directory
+      mode: '0755'
+  
+  - name: Create a mule user
+    user:
+      name: mule
+      state: present
+  
+  - name: copy mule binary from tmp dir to home dir
+    command: cp -r /tmp/mule-enterprise-standalone-4.4.0 ~/mule/
+  
+  - name: Create symbolic link 
+    file:
+      src: "~/mule/mule-enterprise-standalone-4.4.0"
+      dest: "~/mule/mule-enterprise-standalone"
+      state: link
+  
+  - name: Changing perm of "~/mule/mule-enterprise-standalone-4.4.0/bin", adding "+x"
+    file: dest=/home/ubuntu/mule/mule-enterprise-standalone-4.4.0/bin mode=a+x
+  
+  - name: Register runtime with Anypoint platform
+    shell: |
+      cd ~/mule/mule-enterprise-standalone-4.4.0/bin 
+      sh amc_setup -H 6800c715-8529-4498-991e-842261b372b4---682471 mule-server
