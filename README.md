@@ -1,6 +1,6 @@
 # Steps to follow
 
-## VPC1
+## In VPC1
 
 - Create ansible copy project for copying mule runtime and fssm API project to EC2 instance in VPC1.
 - Install ansible in EC2 in VPC1
@@ -22,7 +22,7 @@ export MAVEN_HOME=/usr/share/maven
 ```
 - Give executable perms on mule bin 
 
-## VPC2
+## In VPC2
 
 - In VPC2 EC2 instance(RDS), install mysql
 ```
@@ -43,6 +43,6 @@ Query OK, 0 rows affected (0.00 sec)
 
 - In RDS, update mysql conf (bind ex2 instance private ip address) then restart the mysql 
 ```
- /etc/mysql/mysql.conf.d/mysqld.cnf
- sudo systemctl restart mysql
+/etc/mysql/mysql.conf.d/mysqld.cnf
+sudo systemctl restart mysql
  ```
