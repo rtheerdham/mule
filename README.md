@@ -51,7 +51,7 @@ Query OK, 0 rows affected (0.00 sec)
 sudo systemctl restart mysql
  ```
 
-## More details will be presented in power point presentation(`MulePresentation.pptx`)
+## Demo
 
 ![alt text](https://github.com/rtheerdham/mule/blob/main/mule.gif)
 
