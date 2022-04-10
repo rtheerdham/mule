@@ -42,5 +42,7 @@ Query OK, 0 rows affected (0.00 sec)
 ```
 
 - In RDS, update mysql conf (bind ex2 instance private ip address) then restart the mysql 
-  /etc/mysql/mysql.conf.d/mysqld.cnf
-  sudo systemctl restart mysql
+```
+ /etc/mysql/mysql.conf.d/mysqld.cnf
+ sudo systemctl restart mysql
+ ```
