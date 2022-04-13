@@ -22,7 +22,7 @@ export MAVEN_HOME=/usr/share/maven
 ```
 - Give executable perms on mule bin 
 - Integrate mule runtime with Anypoint Platform(using Ansible)
-- Maven command tp package
+- Maven command to package
 ```
 mvn clean package -DattachMuleSources
 ```
