@@ -22,6 +22,10 @@ export MAVEN_HOME=/usr/share/maven
 ```
 - Give executable perms on mule bin 
 - Integrate mule runtime with Anypoint Platform(using Ansible)
+- Maven command tp package
+```
+mvn clean package -DattachMuleSources
+```
 - Package the invenory API app into jar file and place it inside `apps` folder in mule runtime
 - start the mule with `mule start` command and see the server running from Anypoint platform UI
  
