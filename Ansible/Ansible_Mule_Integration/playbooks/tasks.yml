@@ -40,3 +40,6 @@
     shell: |
       cd ~/mule/mule-enterprise-standalone-4.4.0/bin 
       sh amc_setup -H 6800xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx---68$$$$ mule-server
+  
+  - name: copy Inventory API jar from it location to mule runtime app folder
+    command: cp -r /home/ubuntu/Ansible/fssm-inventory-api/target/fssm-inventory-api-1.0.0-SNAPSHOT-mule-application.jar /home/ubuntu/mule/mule-enterprise-standalone-4.4.0/apps
